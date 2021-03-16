@@ -1,0 +1,63 @@
+@import "font/opensans.css";
+
+body {
+    color: #000000;
+    background: #eceff4;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    margin:4% 30% 0 30%;
+}
+
+#create {
+    position: absolute;
+    top: 60px;
+    width: 700px;
+    text-indent:70px;
+    border:1px solid #DADADA;
+}
+
+#people {
+    position: absolute;
+    margin: 530px 0 40px 0;
+    width: 700px;
+}
+
+#peoplelist{
+    width: 700px;
+    font-family: 'Open Sans';
+    color:#000;
+}
+
+#peoplelist tr:hover{
+    background-color:#66ff66;
+    cursor:pointer;
+}
+
+h2 {
+    text-align:center;
+    text-indent:0px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+hr {
+    height: 0px;
+    border: 0px;
+    border-bottom: 1px solid #DADADA;
+    margin: 5px 5px 5px 5px;
+
+}
+
+#create_ticket {
+    background-color:#fff;
+    border:1px solid #000;
+    height:22px;
+    width:150px;
+    margin:0 0 18px 336px;
+    font-family: 'Open Sans';
+    font-size:14px;
+    font-weight:500;
+}
