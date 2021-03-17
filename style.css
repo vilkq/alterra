@@ -5,37 +5,7 @@ body {
     background: #eceff4;
     font-family: 'Open Sans';
     font-size: 12px;
-    margin:4% 30% 0 30%;
-}
-
-#create {
-    position: absolute;
-    top: 60px;
-    width: 700px;
-    text-indent:70px;
-    border:1px solid #DADADA;
-}
-
-#people {
-    position: absolute;
-    margin: 530px 0 40px 0;
-    width: 700px;
-}
-
-#peoplelist{
-    width: 700px;
-    font-family: 'Open Sans';
-    color:#000;
-}
-
-#peoplelist tr:hover{
-    background-color:#66ff66;
-    cursor:pointer;
-}
-
-h2 {
-    text-align:center;
-    text-indent:0px;
+    margin: 4% 30% 0 30%;
 }
 
 a {
@@ -46,18 +16,114 @@ a {
 hr {
     height: 0px;
     border: 0px;
-    border-bottom: 1px solid #DADADA;
-    margin: 5px 5px 5px 5px;
-
+    border-bottom: 1px solid #eee;
 }
 
-#create_ticket {
-    background-color:#fff;
-    border:1px solid #000;
-    height:22px;
-    width:150px;
-    margin:0 0 18px 336px;
+#AddContactForm_box {
+    width: 320px;
+    height: 250px;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    margin: auto auto;
+}
+
+#AddContactForm_title {
+    color: #333;
     font-family: 'Open Sans';
-    font-size:14px;
-    font-weight:500;
+    font-size: 14px;
+    padding: 19px 0 14px 24px;
+}
+
+#name {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    background: #ffffff !important;
+    outline: none;
+    height: 16px;
+    width: 260px;
+    margin: 15px 0 4px 24px;
+    padding: 11px 0 11px 14px;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Open Sans';
+}
+
+#phone {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    background: #ffffff !important;
+    outline: none;
+    height: 16px;
+    width: 260px;
+    margin: 6px 0 0 24px;
+    padding: 11px 0 11px 14px;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Open Sans';
+}
+
+#submit {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    color: #fff;
+    background: #4d59a1;
+    outline: none;
+    height: 42px;
+    width: 97px;
+    margin: 14px 0 12px 202px;
+    padding: 6px 0 6px 4px;
+    font-size: 14px;
+    font-family: 'Open Sans';
+}
+
+#ContactList_box {
+    width: 320px;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    margin: 20px auto auto auto;
+    padding-bottom: 7px;
+}
+
+#ContactList_title {
+    color: #333;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    padding: 21px 0 14px 24px;
+}
+
+#ContactList_name {
+    color: #333;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    padding: 9px 0 0 24px;
+}
+
+#ContactList_phone {
+    color: #999;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    padding: 0 0 9px 24px;
+}
+
+#del {
+    font-size: 16px;
+    padding: 4px 0 0 8px;
+    display: inline-block;
 }

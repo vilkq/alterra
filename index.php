@@ -10,54 +10,39 @@ if($_POST['submit']){
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <title>Контакты</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="style.css" media="all" />
-    <script type="text/javascript" src="jquery.js"></script>
 </head>
 
 <body>
-    <div id="create">
-        <h2>Добавить контакт</h2>
+    <div id="AddContactForm_box">
+        <div id="AddContactForm_title">Добавить контакт</div>
         <hr />
         <form action="" method="post" name="form" id="form" enctype="multipart/form-data">
-            <table cellspacing="1" cellpadding="4">
-                <tr>
-                    <td width="100">Имя:</td>
-                    <td width="300"><input type="text" name="name" id="name" size="40" autocomplete="off" required value="<?php echo $_POST['name']; ?>" /></td>
-                </tr>
-                <tr>
-                    <td width="100">Телефон:</td>
-                    <td width="300"><input type="text" name="phone" id="phone" size="40" autocomplete="off" required value="<?php echo $_POST['phone']; ?>" /></td>
-                </tr>
-            </table>
-            <br />
+            <input type="text" name="name" id="name" placeholder="Имя" required value="<?php echo $_POST['name']; ?>" />
+            <input type="phone" name="phone" id="phone" placeholder="Телефон" required value="<?php echo $_POST['phone']; ?>" />
             <input type="submit" id="submit" value="Добавить" name="submit" />
         </form>
     </div>
-    <div id="people">
-        <h2>Список контактов</h2>
-        <hr />
+    <div id="ContactList_box">
+        <div id="ContactList_title">Список контактов</div>
         <?php
         $getcurrent = mysqli_query($mysql, "SELECT * FROM `alterra` ORDER BY `id` DESC");
         while($r=mysqli_fetch_array($getcurrent)){
             extract($r);
             ?>
-            <table id="list">
-                <tr>
-                    <td width="550" style="text-indent:40px;">
-                        <?php echo $name?>
-                        <br />
-                        <?php echo $phone?>
-                        <a href='delete.php?id=<?php echo $id?>'>*</a>
-                    </td>
-                </tr>
-            </table>
-        <?php }?>
         <hr />
+        <div id="ContactList_name">
+            <?php echo $name?><a href='delete.php?id=<?php echo $id?>'> ˟</a>
+        </div>
+        <div id="ContactList_phone">
+            <?php echo $phone?>
+        </div>
+        <?php }?>
     </div>
-    <div class="error-box"></div>
 </body>
 
 </html>
