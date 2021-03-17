@@ -16,15 +16,27 @@ if($_POST['submit']){
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="style.css" media="all" />
 </head>
+<script src='jquery.js'></script>
+<script>
+    function check() {
+        var name = $('#name').val();
+        var phone = $('#phone').val();
+        if (name.length >= 2 && phone.length >= 6) {
+            $('#submit').removeAttr('disabled');
+        } else {
+            $('#submit').attr('disabled', 'disabled');
+        }
+    }
+</script>
 
 <body>
     <div id="AddContactForm_box">
         <div id="AddContactForm_title">Добавить контакт</div>
         <hr />
         <form action="" method="post" name="form" id="form" enctype="multipart/form-data">
-            <input type="text" name="name" id="name" placeholder="Имя" required value="<?php echo $_POST['name']; ?>" />
-            <input type="phone" name="phone" id="phone" placeholder="Телефон" required value="<?php echo $_POST['phone']; ?>" />
-            <input type="submit" id="submit" value="Добавить" name="submit" />
+            <input type="text" name="name" id="name" placeholder="Имя" autofocus="autofocus" required value="<?php echo $_POST['name']; ?>" />
+            <input type="tel" name="phone" id="phone" placeholder="Телефон" onkeyup="check()" required value="<?php echo $_POST['phone']; ?>" />
+            <input type="submit" id="submit" value="Добавить" name="submit" disabled />
         </form>
     </div>
     <div id="ContactList_box">
